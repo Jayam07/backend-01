@@ -15,7 +15,7 @@ const register = async({name,email,password,role})=>{
     
 //th//dfg/f//
 
-    const {rawToken,hashedToken} = generateResetToken()
+    const {rawToken,hashedToken} = generateResetToken()//token
 
     const user = await User.create({
         name,
