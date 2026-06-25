@@ -13,9 +13,9 @@ const register = async({name,email,password,role})=>{
    const existing = User.findOne({email})
    if(existing) throw new APIError.conflict("email already exists")
     
+//th//dfg/f//
 
-
-    const {rawToken,hashedToken} = generateResetToken()
+    const {rawToken,hashedToken} = generateResetToken()//token
 
     const user = await User.create({
         name,
