@@ -13,7 +13,7 @@ const register = async({name,email,password,role})=>{
    const existing = User.findOne({email})
    if(existing) throw new APIError.conflict("email already exists")
     
-//th
+//th//dfg/f//
 
     const {rawToken,hashedToken} = generateResetToken()
 
