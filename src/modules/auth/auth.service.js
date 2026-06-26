@@ -4,7 +4,7 @@ import APIError from "../../common/utils/api-error.js"
 import { generateAccessToken, generateRefreshToken, generateResetToken, verifyRefreshToken } from "../../common/utils/jwt.utils.js"
 import User from "./auth.model.js"
 import mongoose from "mongoose"
-import React from "react"
+
 
 const hashToken = (token) => {crypto.createHash("sha256").update(token).digest("hex")}
 
@@ -12,7 +12,7 @@ const hashToken = (token) => {crypto.createHash("sha256").update(token).digest("
 const register = async({name,email,password,role})=>{
     
    const existing = User.findOne({email})
-   if(existing) throw new APIError.conflict("email already exists")
+   if(existing) throw new APIError.conflict("email already exists")////
     
 //th//dfg/f//
 
