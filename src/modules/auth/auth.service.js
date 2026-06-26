@@ -5,13 +5,14 @@ import { generateAccessToken, generateRefreshToken, generateResetToken, verifyRe
 import User from "./auth.model.js"
 import mongoose from "mongoose"
 
+
 const hashToken = (token) => {crypto.createHash("sha256").update(token).digest("hex")}
 
 
 const register = async({name,email,password,role})=>{
     
    const existing = User.findOne({email})
-   if(existing) throw new APIError.conflict("email already exists")
+   if(existing) throw new APIError.conflict("email already exists")////
     
 //th//dfg/f//
 
